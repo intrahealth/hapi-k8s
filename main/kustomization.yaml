@@ -1,0 +1,13 @@
+configMapGenerator:
+
+resources:
+  # volumes
+  - hapi-data-persistentvolumeclaim.yaml
+
+  # deployments
+  - db-deployment.yaml
+  - fhir-deployment.yaml
+  
+  # services
+  - db-service.yaml
+  - fhir-service.yaml
