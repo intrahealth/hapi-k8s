@@ -1,6 +1,6 @@
 resources:
   # volumes
-  - hapi-data-persistentvolumeclaim.yaml
+  - db-persistentvolumeclaim.yaml
 
   # deployments
   - db-deployment.yaml
