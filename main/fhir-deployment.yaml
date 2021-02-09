@@ -1,12 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    kompose.cmd: kompose convert -f docker-compose.hapi.yml
-    kompose.version: 1.22.0 (HEAD)
-  creationTimestamp: null
-  labels:
-    io.kompose.service: fhir
   name: fhir
 spec:
   replicas: 1
@@ -17,10 +11,6 @@ spec:
     type: Recreate
   template:
     metadata:
-      annotations:
-        kompose.cmd: kompose convert -f docker-compose.hapi.yml
-        kompose.version: 1.22.0 (HEAD)
-      creationTimestamp: null
       labels:
         io.kompose.service: fhir
     spec:
@@ -41,12 +31,5 @@ spec:
           ports:
             - containerPort: 8080
           resources: {}
-          volumeMounts:
-            - mountPath: /data/hapi
-              name: hapi-data
       restartPolicy: Always
-      volumes:
-        - name: hapi-data
-          persistentVolumeClaim:
-            claimName: hapi-data
 status: {}
