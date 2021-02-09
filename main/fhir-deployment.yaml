@@ -36,7 +36,7 @@ spec:
               value: jdbc:postgresql://db:5432/hapi
             - name: spring.datasource.username
               value: admin
-          image: hapiproject/hapi:v5.2.0
+          image: hapiproject/hapi:v5.2.1
           name: fhir
           ports:
             - containerPort: 8080
