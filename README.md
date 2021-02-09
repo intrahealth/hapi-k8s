@@ -1,6 +1,6 @@
 # Simple HAPI on Kubernetes w/Postgres
 
-> Before using in production, remove load balancer in fhir-service to ensure that the HAPI QUI and FHIR endpoint are not exposed to the public.
+> Before using in production, remove load balancer in fhir-service to ensure that the HAPI GUI and FHIR endpoint are not exposed to the public.
 
 ```
 kubectl apply -f ./main
